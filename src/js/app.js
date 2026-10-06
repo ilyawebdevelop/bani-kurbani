@@ -14,10 +14,10 @@ import Swiper, { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumb
 Swiper.use([Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar]);
 
 $(window).on("load", function () {
-	$("video.introVideo").each(function () {
-		var video = $(this);
-		video[0].play();
-	});
+  $("video.introVideo").each(function () {
+    var video = $(this);
+    video[0].play();
+  });
 });
 
 // Инициализация слайдера includeSlider
@@ -47,3 +47,41 @@ document.querySelectorAll('.includeSlider').forEach(n => {
     },
   });
 });
+
+// Инициализация слайдера galSlider
+document.querySelectorAll('.galSlider').forEach(n => {
+  const mySwiperGal = new Swiper(n, {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 600,
+    autoplay: false,
+    navigation: {
+      nextEl: n.closest('.swiperW')?.querySelector('.navArrowNext'),
+      prevEl: n.closest('.swiperW')?.querySelector('.navArrowPrev'),
+    },
+  });
+});
+
+// Tabs
+
+(function () {
+  // Находим все независимые блоки табов на странице
+  var containers = document.querySelectorAll('.wp-tabs');
+
+  containers.forEach(function (container) {
+    var buttons = container.querySelectorAll('.wp-tabs__btn');
+    var panels = container.querySelectorAll('.wp-tabs__panel');
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var index = btn.getAttribute('data-index');
+
+        buttons.forEach(function (b) { b.classList.remove('active'); });
+        panels.forEach(function (p) { p.classList.remove('active'); });
+
+        btn.classList.add('active');
+        container.querySelector('.wp-tabs__panel[data-index="' + index + '"]').classList.add('active');
+      });
+    });
+  });
+})();

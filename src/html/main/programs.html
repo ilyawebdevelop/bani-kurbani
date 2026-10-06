@@ -1,0 +1,55 @@
+<section class="programs sect pt-0">
+  <div class="container">
+    <div class="sectHead d-flex flex-column">
+      <h2 class="h2 text-center mb-10">
+        Программы для души и тела
+      </h2>
+      <div class="sect-line mb-0">
+        <span></span>
+        <img src="@img/icons/sect-list.svg" alt="icon">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wp-tabs">
+    <div class="container">
+      <div class="wp-tabs__nav">
+        <button class="wp-tabs__btn active" data-index="1">Программы для компании</button>
+        <button class="wp-tabs__btn" data-index="2">Программы для двоих</button>
+        <button class="wp-tabs__btn" data-index="3">Девичник</button>
+      </div>
+    </div>
+
+    <div class="wp-tabs-body">
+      <div class="wp-tabs__panel active" data-index="1">
+        <div class="programsList">
+          @@include('program-card-1.html',{})
+          @@include('program-card-2.html',{})
+          @@include('program-card-3.html',{})
+        </div>
+      </div>
+      <div class="wp-tabs__panel" data-index="2">
+        <div class="programsList">
+          @@include('program-card-3.html',{})
+          @@include('program-card-1.html',{})
+          @@include('program-card-2.html',{})
+        </div>
+      </div>
+      <div class="wp-tabs__panel" data-index="3">
+        @@include('program-card-2.html',{})
+        @@include('program-card-3.html',{})
+        @@include('program-card-1.html',{})
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+</section>

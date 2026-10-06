@@ -6,9 +6,9 @@
     background-color: var(--background);
     width: fit-content;
     border-radius: 15px;
-    &-item {
 
-    }
+    &-item {}
+
     &-btn {
       height: 40px;
       display: flex;
@@ -20,16 +20,93 @@
       border-radius: 14px;
       padding-left: 16px;
       padding-right: 16px;
+
       &--active {
         background-color: var(--primary);
         color: #fff;
       }
     }
   }
+
   &__panel {
     display: none;
+
     &--active {
       display: block;
     }
+  }
+}
+
+
+
+.wp-tabs {
+
+  margin: 0 auto 40px;
+  font-family: inherit;
+}
+
+.wp-tabs__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  background: rgba(42, 42, 42, 0.1);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+
+.wp-tabs__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50px;
+  height: 54px;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: background-color .2s linear, color .2s linear;
+  background: #f8f2e9;
+}
+
+.wp-tabs__btn.active {
+  background-color: #7a8f61;
+  color: #fff;
+}
+
+.wp-tabs__btn:hover {
+  background-color: #7a8f61;
+  color: #fff;
+}
+
+.wp-tabs__panel {
+  display: none;
+  animation: fadeIn 0.25s ease;
+}
+
+.wp-tabs__panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
