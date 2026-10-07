@@ -385,3 +385,55 @@ h3,
   font-size: 14px;
   color: rgba(42, 42, 42, 0.7);
 }
+
+.table {
+  border: 1px solid rgba(122, 143, 97, 0.2);
+
+  &-head {
+    display: flex;
+
+    .col {
+      background: linear-gradient(180deg, #ebe7da 0%, #dfdfce 100%);
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 0;
+      font-size: 28px;
+      line-height: 100%;
+      color: #2a2a2a;
+      font-family: var(--font-family-second);
+      padding-top: 14px;
+      padding-bottom: 14px;
+
+      &:not(:last-child) {
+        border-right: 1px solid rgba(122, 143, 97, 0.2);
+      }
+    }
+  }
+
+  &-body {
+    .row {
+      display: flex;
+
+      .col {
+        flex: 1 1 0;
+        background: #fbf8f4;
+        padding-top: 19px;
+        padding-bottom: 19px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-right: 1px solid rgba(122, 143, 97, 0.2);
+        border-top: 1px solid rgba(122, 143, 97, 0.2);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+        &:not(:first-child) {
+
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

@@ -1229,6 +1229,49 @@ h3,
   color: rgba(42, 42, 42, 0.7);
 }
 
+.table {
+  border: 1px solid rgba(122, 143, 97, 0.2);
+}
+.table-head {
+  display: flex;
+}
+.table-head .col {
+  background: linear-gradient(180deg, #ebe7da 0%, #dfdfce 100%);
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  font-size: 28px;
+  line-height: 100%;
+  color: #2a2a2a;
+  font-family: var(--font-family-second);
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.table-head .col:not(:last-child) {
+  border-right: 1px solid rgba(122, 143, 97, 0.2);
+}
+.table-body .row {
+  display: flex;
+}
+.table-body .row .col {
+  flex: 1 1 0;
+  background: #fbf8f4;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-right: 1px solid rgba(122, 143, 97, 0.2);
+  border-top: 1px solid rgba(122, 143, 97, 0.2);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.table-body .row .col:not(:first-child) {
+  justify-content: center;
+}
+
 :root {
   --f-spinner-width: 36px;
   --f-spinner-height: 36px;
@@ -3347,4 +3390,34 @@ html.with-fancybox body.hide-scrollbar {
   flex-direction: column;
   gap: 0;
   /* Убираем стандартные отступы, так как карточки будут перекрывать друг друга */
+}
+
+.match {
+  padding-bottom: 90px;
+  overflow: hidden;
+}
+.match .container {
+  position: relative;
+}
+
+.matchTable {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.matchAbstrL {
+  position: absolute;
+  left: -150px;
+  top: 10px;
+  width: 432px;
+}
+
+.matchAbstrR {
+  position: absolute;
+  right: -150px;
+  top: 10px;
+  width: 432px;
 }
