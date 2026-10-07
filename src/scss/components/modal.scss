@@ -2,6 +2,13 @@
 .modal {
   display: none;
   color: var(--main-color);
+  background-color: #F0EAE0;
+
+  h2 {
+    font-size: 40px;
+    color: #663333;
+  }
+
   &-header {
     padding: 45px;
     padding-bottom: 25px;
@@ -16,9 +23,70 @@
   &-title {
     font-size: 23px;
   }
-  .btn-close {
-    background: none;
-    opacity: 1;
+
+  .sect-line {
+    span {
+      flex-grow: 1;
+    }
   }
 }
 
+.f-button.is-close-btn {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  top: 20px;
+  right: 20px;
+
+  &:hover {
+    background-color: transparent;
+    opacity: .75;
+  }
+}
+
+.modalProgram {
+  width: 800px;
+  padding: 60px;
+  height: 100%;
+  margin-left: auto;
+  overflow-y: scroll;
+
+  &Row {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 160px 1fr;
+  }
+
+  .program-card-cats {
+    margin-bottom: 0;
+  }
+
+  .program-card-price-wrap {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(122, 143, 97, 0.15);
+  }
+}
+
+.fancybox__backdrop {
+  backdrop-filter: blur(20px);
+  background: rgba(22, 17, 11, 0.5);
+}
+
+.modalProgramParams {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 10px;
+}
+
+.modalProgramParam {
+  grid-column: 6 span;
+  display: flex;
+  column-gap: 10px;
+  align-items: flex-start;
+
+  img {
+    width: 32px;
+    flex-shrink: 0;
+  }
+}

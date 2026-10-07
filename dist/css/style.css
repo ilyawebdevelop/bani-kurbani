@@ -1105,6 +1105,10 @@ h3,
   display: flex;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -1172,6 +1176,14 @@ h3,
   margin-bottom: 10px;
 }
 
+.mb-4 {
+  margin-bottom: 24px;
+}
+
+.mt-4 {
+  margin-top: 24px;
+}
+
 .swiperW {
   display: flex;
   position: relative;
@@ -1201,6 +1213,20 @@ h3,
 
 .bg--light-brown {
   background-color: #F0EAE0 !important;
+}
+
+.fz-20 {
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.font-family-second {
+  font-family: var(--font-family-second);
+}
+
+.caption {
+  font-size: 14px;
+  color: rgba(42, 42, 42, 0.7);
 }
 
 :root {
@@ -2551,6 +2577,9 @@ html.with-fancybox body.hide-scrollbar {
   height: 16px;
   stroke: #000;
 }
+.button.w-100 {
+  width: 100%;
+}
 
 .introContentOrderBtn {
   font-weight: 600;
@@ -2656,6 +2685,11 @@ html.with-fancybox body.hide-scrollbar {
 .modal {
   display: none;
   color: var(--main-color);
+  background-color: #F0EAE0;
+}
+.modal h2 {
+  font-size: 40px;
+  color: #663333;
 }
 .modal-header {
   padding: 45px;
@@ -2669,9 +2703,63 @@ html.with-fancybox body.hide-scrollbar {
 .modal-title {
   font-size: 23px;
 }
-.modal .btn-close {
-  background: none;
-  opacity: 1;
+.modal .sect-line span {
+  flex-grow: 1;
+}
+
+.f-button.is-close-btn {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  top: 20px;
+  right: 20px;
+}
+.f-button.is-close-btn:hover {
+  background-color: transparent;
+  opacity: 0.75;
+}
+
+.modalProgram {
+  width: 800px;
+  padding: 60px;
+  height: 100%;
+  margin-left: auto;
+  overflow-y: scroll;
+}
+.modalProgramRow {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 160px 1fr;
+}
+.modalProgram .program-card-cats {
+  margin-bottom: 0;
+}
+.modalProgram .program-card-price-wrap {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(122, 143, 97, 0.15);
+}
+
+.fancybox__backdrop {
+  backdrop-filter: blur(20px);
+  background: rgba(22, 17, 11, 0.5);
+}
+
+.modalProgramParams {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 10px;
+}
+
+.modalProgramParam {
+  grid-column: 6 span;
+  display: flex;
+  column-gap: 10px;
+  align-items: flex-start;
+}
+.modalProgramParam img {
+  width: 32px;
+  flex-shrink: 0;
 }
 
 .tabs__nav {
@@ -3105,9 +3193,6 @@ html.with-fancybox body.hide-scrollbar {
   object-fit: cover;
 }
 
-.programs {
-  overflow: hidden;
-}
 .programs .wp-tabs__nav {
   margin-bottom: 40px;
 }
@@ -3117,6 +3202,7 @@ html.with-fancybox body.hide-scrollbar {
   padding-bottom: 60px;
   position: sticky;
   top: 40px;
+  overflow: hidden;
 }
 .program-card:nth-child(odd) {
   background-color: #f0eae0;
@@ -3134,7 +3220,7 @@ html.with-fancybox body.hide-scrollbar {
 .program-card-cats li {
   border: 1px solid rgba(42, 42, 42, 0.1);
   border-radius: 20px;
-  padding: 8px 12px;
+  padding: 6px 12px;
   font-size: 14px;
   color: #2a2a2a;
 }

@@ -1,5 +1,5 @@
 .programs {
-  overflow: hidden;
+
 
   .wp-tabs__nav {
     margin-bottom: 40px;
@@ -11,6 +11,7 @@
   padding-bottom: 60px;
   position: sticky;
   top: 40px;
+  overflow: hidden;
 
   &:nth-child(odd) {
     background-color: #f0eae0;
@@ -30,7 +31,7 @@
     li {
       border: 1px solid rgba(42, 42, 42, 0.1);
       border-radius: 20px;
-      padding: 8px 12px;
+      padding: 6px 12px;
       font-size: 14px;
       color: #2a2a2a;
     }
