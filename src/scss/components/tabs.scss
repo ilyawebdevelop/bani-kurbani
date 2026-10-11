@@ -41,7 +41,7 @@
 
 .wp-tabs {
 
-  margin: 0 auto 40px;
+  margin: 0 auto 0;
   font-family: inherit;
 }
 
@@ -53,6 +53,7 @@
   background: rgba(42, 42, 42, 0.1);
   width: -webkit-fit-content;
   width: -moz-fit-content;
+  flex-wrap: wrap;
   width: fit-content;
   border-radius: 100px;
   margin-left: auto;
@@ -60,6 +61,7 @@
   -webkit-column-gap: 10px;
   -moz-column-gap: 10px;
   column-gap: 10px;
+  row-gap: 10px;
 }
 
 .wp-tabs__btn {

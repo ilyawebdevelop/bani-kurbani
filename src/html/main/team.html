@@ -1,0 +1,153 @@
+<section class="team sect bg--black">
+  <img class="team-abstr" src="@img/team/team-abstr.svg" alt="abstract">
+  <div class="container">
+
+    <div class="sectHead flex-column">
+      <h2 class="h2 text-center mb-10">
+        Наши мастера
+      </h2>
+      <div class="sect-line mb-0">
+        <span></span>
+        <img src="@img/icons/sect-list.svg" alt="icon">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="wp-tabs">
+
+      <div class="container">
+        <div class="wp-tabs__nav">
+          <button class="wp-tabs__btn active" data-index="1">администраторы</button>
+          <button class="wp-tabs__btn" data-index="2">пар-мастера</button>
+          <button class="wp-tabs__btn" data-index="3">спа-мастера</button>
+        </div>
+      </div>
+
+      <div class="wp-tabs-body">
+        <div class="wp-tabs__panel active" data-index="1">
+          <div class="swiperW">
+            <button class="navArrow navArrowPrev" type="button">
+              <img src="@img/icons/slider-prev.svg" alt="arrow">
+            </button>
+            <div class="swiper teamSlider">
+              <div class="swiper-wrapper">
+
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-1.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-2.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-3.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-4.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-3.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-4.html',{})
+                </div>
+              </div>
+            </div>
+            <button class="navArrow navArrowNext" type="button">
+              <img src="@img/icons/slider-next.svg" alt="arrow">
+            </button>
+
+            <div class="teamNav">
+              <!-- Полоса скроллбара -->
+              <div class="swiper-scrollbar team-scrollbar"></div>
+
+              <!-- Каунтер (счетчик страниц) -->
+              <div class="swiper-pagination team-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wp-tabs__panel" data-index="2">
+          <div class="swiperW">
+            <button class="navArrow navArrowPrev" type="button">
+              <img src="@img/icons/slider-prev.svg" alt="arrow">
+            </button>
+            <div class="swiper teamSlider">
+              <div class="swiper-wrapper">
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-2.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-3.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-4.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-3.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-4.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-1.html',{})
+                </div>
+              </div>
+            </div>
+            <button class="navArrow navArrowNext" type="button">
+              <img src="@img/icons/slider-next.svg" alt="arrow">
+            </button>
+
+            <div class="teamNav">
+              <!-- Полоса скроллбара -->
+              <div class="swiper-scrollbar team-scrollbar"></div>
+
+              <!-- Каунтер (счетчик страниц) -->
+              <div class="swiper-pagination team-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wp-tabs__panel" data-index="3">
+          <div class="swiperW">
+            <button class="navArrow navArrowPrev" type="button">
+              <img src="@img/icons/slider-prev.svg" alt="arrow">
+            </button>
+            <div class="swiper teamSlider">
+              <div class="swiper-wrapper">
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-3.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-4.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-3.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-4.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-1.html',{})
+                </div>
+                <div class="teamSlide swiper-slide">
+                  @@include('team-card-2.html',{})
+                </div>
+              </div>
+            </div>
+            <button class="navArrow navArrowNext" type="button">
+              <img src="@img/icons/slider-next.svg" alt="arrow">
+            </button>
+
+            <div class="teamNav">
+              <!-- Полоса скроллбара -->
+              <div class="swiper-scrollbar team-scrollbar"></div>
+
+              <!-- Каунтер (счетчик страниц) -->
+              <div class="swiper-pagination team-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

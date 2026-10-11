@@ -11,14 +11,8 @@
   padding-left: 30px;
   padding-right: 30px;
   cursor: pointer;
-
-  &--lg {
-    height: 65px;
-
-    @media(max-width: 991px) {
-      height: 50px;
-    }
-  }
+  font-weight: 600;
+  text-transform: uppercase;
 
   &--white {
     background-color: #fff;
@@ -28,8 +22,9 @@
     background-color: #663333;
     color: #fff;
     font-size: 18px;
-    font-weight: 600;
+
     border-radius: 50px;
+
     &:hover {
       background-color: #7a8f61;
     }
@@ -50,6 +45,7 @@
     height: 16px;
     stroke: #000;
   }
+
   &.w-100 {
     width: 100%;
   }
@@ -112,13 +108,19 @@
   color: #2a2a2a;
   white-space: nowrap;
   align-items: center;
+
   &:hover {
     img {
       transform: translateX(3px);
     }
   }
+
   img {
     width: 25px;
     transition: transform .2s linear;
   }
+}
+
+.formBtn {
+  height: 65px;
 }
