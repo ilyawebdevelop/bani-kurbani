@@ -3,18 +3,69 @@
   <div class="container">
     <div class="headerW">
 
+      <div class="hamburgerW">
+        <div class="hamburger" id="toggle">
+
+        </div><!-- /Hamburger Menu -->
+      </div>
+
       <nav class="headerNav">
+        <div class="headerNavHead">
+          <button class="headerNavClose">
+            <img src="@img/icons/close-green.svg" alt="close">
+          </button>
+        </div>
         <ul>
           <li><a href="#">Программы</a></li>
-          <li class="current-menu-item"><a href="#">Меню</a></li>
+          <li><a href="#">Меню</a></li>
           <li><a href="#">О комплексе</a></li>
           <li><a href="#">Сертификат</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
+
+        <div class="headerNavContacts d-flex flex-column align-center gap-20">
+          <a href="tel:+79869299884">+7 (986) 929-98-84</a>
+          <button class="button button--brown">
+            ЗАБРОНИРОВАТЬ
+          </button>
+        </div>
+
+        <div class="headerNavFooter d-flex flex-column gap-10">
+          <div class="fz-18 text-center">г. Казань, ул. Мухамедьяра, д. 2</div>
+          <div class="text-center opacity-70">
+            пн-вс с 11:00 до 23:00
+          </div>
+          <div class="socials">
+            <ul class="d-flex justify-content-center">
+              <li>
+                <a href="#" target="_blank" rel="nofollow">
+                  <img src="@img/admin/socials/icon-1.svg" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="nofollow">
+                  <img src="@img/admin/socials/icon-2.svg" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="nofollow">
+                  <img src="@img/admin/socials/icon-3.svg" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="nofollow">
+                  <img src="@img/admin/socials/icon-4.svg" alt="icon">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </nav>
 
       <a href="#" class="headerLogo logo">
-        <img src="@img/admin/logo/logo-large.svg" alt="logo">
+        <img class="headerLogoBlack" src="@img/admin/logo/logo.svg" alt="logo">
+        <img class="headerLogoWhite" src="@img/admin/logo/logo-white.svg" alt="logo">
       </a>
 
       <div class="headerR">
@@ -22,7 +73,7 @@
           <a href="tel:+79869299884" class="headerPhone">+7 (986) 929-98-84</a>
           <span class="headerPlace">г. Казань, ул. Мухамедьяра, д. 2</span>
         </div>
-        <button class="button button--transparent-white">
+        <button class="button button--transparent-white" data-fancybox data-src="#modalOrder">
           ЗАБРОНИРОВАТЬ
         </button>
       </div>

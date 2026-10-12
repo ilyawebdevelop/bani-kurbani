@@ -3,25 +3,12 @@
   display: none;
   color: var(--main-color);
   background-color: #F0EAE0;
+  width: 800px;
+  padding: 60px;
 
   h2 {
     font-size: 40px;
     color: #663333;
-  }
-
-  &-header {
-    padding: 45px;
-    padding-bottom: 25px;
-    border-bottom: none;
-  }
-
-  &-body {
-    padding: 45px;
-    padding-top: 0;
-  }
-
-  &-title {
-    font-size: 23px;
   }
 
   .sect-line {
@@ -89,4 +76,15 @@
     width: 32px;
     flex-shrink: 0;
   }
+}
+.modalForm {
+  .inputW {
+    margin-bottom: 10px;
+  }
+  .agreement {
+    margin-top: 20px;
+  }
+}
+.modalDescr{
+  margin-bottom: 15px;
 }

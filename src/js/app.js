@@ -2,6 +2,7 @@ import * as flsFunctions from "./modules/functions.js";
 import "./modules/jquery-3.7.1.min.js";
 import { Fancybox } from "./modules/fancybox.esm.js";
 import "./modules/inputmask.min.js";
+import "./../../node_modules/page-scroll-to-id/jquery.malihu.PageScroll2id.js";
 import './components.js';
 
 flsFunctions.isWebp();
@@ -319,4 +320,48 @@ window.addEventListener('scroll', function() {
     } else {
         header.classList.remove('active');
     }
+});
+
+// Burger
+const btnMenu = document.querySelector('#toggle');
+const menu = document.querySelector('.headerNav');
+const bodyEl = document.querySelector('body');
+const btnClose = document.querySelector('.headerNavClose');
+
+const toggleMenu = function () {
+  menu.classList.toggle('active');
+}
+const toggleBurger = function () {
+  btnMenu.classList.toggle('active');
+}
+const bodyOverflow = function () {
+  bodyEl.classList.toggle('hidden');
+}
+
+
+btnMenu?.addEventListener('click', function (e) {
+  e.stopPropagation();
+  toggleMenu();
+  toggleBurger();
+  bodyOverflow();
+});
+btnClose?.addEventListener('click', function (e) {
+  e.stopPropagation();
+  toggleMenu();
+  toggleBurger();
+  bodyOverflow();
+});
+
+
+$("a[rel='m_PageScroll2id']").mPageScroll2id({
+  onStart: function () {
+
+    if (mediaQueryMax991.matches) {
+      toggleMenu();
+      toggleBurger();
+      bodyOverflow();
+    }
+  },
+  scrollSpeed: 50,
+  offset: 77,
 });

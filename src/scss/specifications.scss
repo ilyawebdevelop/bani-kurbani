@@ -148,7 +148,7 @@ section {
 
 
 .container {
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 @media (min-width: 575.98px) {
@@ -269,6 +269,9 @@ h3,
 .flex-column {
   flex-direction: column;
 }
+.align-center {
+  align-items: center;
+}
 .align-items-end {
   align-items: flex-end;
 }
@@ -277,6 +280,9 @@ h3,
 }
 .gap-10 {
   gap: 10px;
+}
+.gap-20 {
+  gap: 20px;
 }
 .sect-line {
   display: flex;
@@ -369,7 +375,9 @@ h3,
 .mt-4 {
   margin-top: 24px;
 }
-
+.opacity-70 {
+  opacity: .7;
+}
 .swiperW {
   display: flex;
   position: relative;
