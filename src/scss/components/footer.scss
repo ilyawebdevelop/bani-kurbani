@@ -1,4 +1,89 @@
 // Footer
 .footer {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background: url('@img/footer/bg.jpg') no-repeat center center / cover;
 
+  &T {
+    display: flex;
+    align-items: center;
+    column-gap: 90px;
+    justify-content: space-between;
+  }
+
+  &B {
+    column-gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Logo {
+    &:hover {
+      opacity: .85;
+    }
+    img {
+      width: 180px;
+    }
+  }
+
+  &Links {
+    a {
+      color: #f8f2e9;
+      font-size: 14px;
+      &:hover {
+        color: var(--green);
+      }
+    }
+  }
+
+  &Nav {
+    ul {
+      display: flex;
+      column-gap: 40px;
+
+      li {
+        a {
+          font-weight: 600;
+          font-size: 18px;
+          letter-spacing: -0.05em;
+          text-transform: uppercase;
+          color: #f8f2e9;
+          &:hover {
+            color: var(--green);
+          }
+        }
+      }
+    }
+  }
+
+  &Develop {
+    display: flex;
+    column-gap: 6px;
+    align-items: center;
+    font-size: 14px;
+    color: #f8f2e9;
+
+    &:hover {
+      color: var(--green);
+    }
+  }
+
+  &Contacts {
+    color: #f8f2e9;
+  }
+
+  &Tel {
+    font-size: 22px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--green);
+    }
+  }
+
+  .copyright {
+    font-size: 14px;
+    color: #f8f2e9;
+  }
 }

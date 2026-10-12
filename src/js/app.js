@@ -1,6 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 import "./modules/jquery-3.7.1.min.js";
 import { Fancybox } from "./modules/fancybox.esm.js";
+import "./modules/inputmask.min.js";
 import './components.js';
 
 flsFunctions.isWebp();
@@ -8,6 +9,40 @@ flsFunctions.isWebp();
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,
 });
+
+let inputs = document.querySelectorAll('input[type="tel"]');
+let im = new Inputmask({
+  mask: '+7 (999) 999-99-99',
+  onBeforeWrite: function (event, buffer, caretPos, opts) {
+    // console.log(caretPos);
+    // Проверяем:
+    // 1. Позиция каретки (caretPos) равна 5 (вторая цифра в "99")
+    // 2. Нажата клавиша "8"
+    if (caretPos === 5 && event.key === '8') {
+      event.preventDefault(); // Запрещаем ввод     
+      // console.log("Ввод 8 в этой позиции запрещен!");
+      return {
+        refreshFromBuffer: true,
+        buffer: [],
+        caret: 4
+      };
+    }
+  },
+  onBeforePaste: function (pastedValue, opts) {
+    // Удаляем всё, кроме цифр
+    var processedValue = pastedValue.replace(/\D/g, "");
+
+    // Если первая цифра 7 или 8 и в строке 11 цифр, убираем первую
+    if (processedValue.length === 11 && (processedValue[0] === '7' || processedValue[0] === '8')) {
+      return processedValue.substring(1);
+    }
+
+    return pastedValue;
+  }
+
+});
+
+im.mask(inputs);
 
 // Import swiper
 import Swiper, { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar } from 'swiper';
@@ -198,7 +233,7 @@ document.querySelectorAll('.teamSlider').forEach(n => {
           // Считаем общее количество страниц (групп слайдов)
           paginationEl.innerHTML = `<span class="swiper-pagination-current">${currentSlide}</span>/<span class="swiper-pagination-total">${totalSlides}</span>`;
 
-         
+
         }
       }
     }
@@ -227,3 +262,61 @@ document.querySelectorAll('.teamSlider').forEach(n => {
     });
   });
 })();
+
+function map() {
+  const contactsMap = document.querySelector("#map");
+  if (contactsMap) {
+    const center = JSON.parse(contactsMap.dataset.center);
+    const zoom = Number(contactsMap.dataset.zoom);
+    function init() {
+      const htmlMap = new ymaps.Map(contactsMap, {
+        center,
+        zoom
+      });
+      const placemark = new ymaps.Placemark(center, {}, {
+        iconLayout: "default#image",
+        iconImageHref: "../img/icons/marker.svg",
+        iconImageSize: [43, 50],
+        iconImageOffset: [-22, -25]
+      });
+      htmlMap.controls.remove("geolocationControl");
+      htmlMap.controls.remove("searchControl");
+      htmlMap.controls.remove("trafficControl");
+      htmlMap.controls.remove("typeSelector");
+      htmlMap.controls.remove("fullscreenControl");
+      htmlMap.controls.remove("rulerControl");
+      htmlMap.behaviors.disable(["scrollZoom"]);
+      htmlMap.geoObjects.add(placemark);
+    }
+    ymaps.ready(init);
+  }
+}
+
+map();
+
+$('.accordion-header').click(function () {
+  // Находим текстовый контент, который идет сразу за кликнутым заголовком
+  const currentContent = $(this).next('.accordion-content');
+
+  // Закрываем абсолютно все блоки .accordion-content на странице, кроме текущего
+  $('.accordion-content').not(currentContent).slideUp(300);
+
+  // НАХОДИМ ВСЕ заголовки на странице, убираем у них класс active (кроме текущего)
+  $('.accordion-header').not(this).removeClass('active');
+
+  // Плавно переключаем видимость текущего контента
+  currentContent.slideToggle(300);
+
+  // Переключаем (добавляем/удаляем) класс active на самом кликнутом заголовке
+  $(this).toggleClass('active');
+});
+
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    
+    if (window.scrollY >= 100) {
+        header.classList.add('active');
+    } else {
+        header.classList.remove('active');
+    }
+});

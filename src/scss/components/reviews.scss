@@ -1,0 +1,20 @@
+.reviews {
+  .wp-tabs-head {
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+  }
+  .wp-tabs__nav {
+    margin-right: unset;
+  }
+  .wp-tabs__panel {
+    padding-top: 40px;
+  }
+  .galSectNav .swiper-scrollbar {
+    width: 100%;
+    background-color: rgba(122, 143, 97, 0.2);
+  }
+  .galSectNav {
+    padding-right: 0;
+  }
+}

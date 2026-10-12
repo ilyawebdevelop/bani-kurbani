@@ -5,6 +5,15 @@
 .galSectSlide {
   display: flex;
   transition: opacity .2s linear;
+  .video-play {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
 
   &:hover {
     opacity: .85;

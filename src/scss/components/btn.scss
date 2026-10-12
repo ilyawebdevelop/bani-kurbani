@@ -30,6 +30,15 @@
     }
   }
 
+  &--green {
+    background-color: #7a8f61;
+    color: #fff;
+
+    &:hover {
+      background-color: #663333;
+    }
+  }
+
   &--transparent-white {
     border: 1px solid rgba(248, 242, 233, 0.3);
     color: #f8f2e9;
@@ -123,4 +132,19 @@
 
 .formBtn {
   height: 65px;
+}
+.contactsPlaceBtn{
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  &:hover {
+    color: #663333;
+  }
+}
+.contactsHeadAction {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
 }
